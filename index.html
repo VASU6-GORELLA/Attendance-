@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSM 2 Attendance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">DAILY ATTENDANCE</p>
+      <h1>CSM 2 Attendance</h1>
+      <p class="sub">Mark today's attendance and copy the WhatsApp message.</p>
+    </header>
+
+    <section class="card summary-card">
+      <div class="date-row">
+        <label for="date">Attendance date</label>
+        <input id="date" type="date">
+      </div>
+      <div class="stats">
+        <div class="stat"><strong id="presentCount">72</strong><span>Present</span></div>
+        <div class="stat"><strong id="absentCount">0</strong><span>Absent</span></div>
+        <div class="stat"><strong id="percentage">100%</strong><span>Percentage</span></div>
+      </div>
+    </section>
+
+    <section class="card attendance-card">
+      <div class="actions">
+        <button id="allPresent" class="primary">✅ All Present</button>
+        <button id="clearAll" class="secondary">↔ Clear</button>
+      </div>
+      <div id="students" class="student-grid"></div>
+      <p class="hint">Green = present · Red = absent. Tap again to change.</p>
+    </section>
+
+    <section class="card message-card">
+      <div class="message-head">
+        <h2>WhatsApp message</h2>
+        <button id="copyBtn" class="copy">📋 Copy</button>
+      </div>
+      <textarea id="message" readonly></textarea>
+    </section>
+
+    <p id="toast" class="toast">Copied!</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

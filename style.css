@@ -1,0 +1,21 @@
+*{box-sizing:border-box}
+:root{--bg:#f2f4f6;--card:#fff;--text:#17202a;--muted:#737b84;--green:#b9f3d2;--green-bg:#eefbf4;--green-text:#176b43;--red:#f5a5a9;--red-bg:#ffe9ea;--red-text:#a52b31;--navy:#101a2d}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+.app{width:min(100%,700px);margin:auto;padding:18px 16px 36px}
+.hero{padding:18px 8px 22px}.eyebrow{margin:0 0 7px;font-size:12px;font-weight:800;letter-spacing:1.5px;color:#607080}
+h1{margin:0;font-size:clamp(28px,7vw,40px);line-height:1.05}.sub{margin:9px 0 0;color:var(--muted);font-size:14px}
+.card{background:var(--card);border-radius:25px;margin-bottom:18px;padding:22px;box-shadow:0 8px 25px rgba(30,45,60,.07)}
+.date-row{display:flex;align-items:center;justify-content:space-between;gap:14px}.date-row label{font-weight:800;font-size:17px}
+input[type=date]{width:220px;border:1px solid #d5d9de;border-radius:15px;padding:13px 14px;font-size:16px;color:#20252b;background:white}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.stat{background:#f8f9fb;border-radius:18px;text-align:center;padding:15px 8px}
+.stat strong{display:block;font-size:28px;margin-bottom:5px}.stat span{color:var(--muted);font-size:14px}
+.actions{display:flex;gap:12px;margin-bottom:20px}button{border:0;cursor:pointer;font:inherit;font-weight:800;border-radius:16px;padding:14px 17px}
+.primary,.secondary{flex:1;background:#e9ebef;color:#171c25;font-size:16px}.student-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.student{min-height:86px;border:2px solid var(--green);background:var(--green-bg);color:var(--green-text);border-radius:16px;padding:9px 5px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.12s;user-select:none}
+.student:active{transform:scale(.96)}.student.absent{border-color:var(--red);background:var(--red-bg);color:var(--red-text)}
+.student .symbol{font-size:22px;line-height:22px}.student .roll{font-size:13px;font-weight:900;margin-top:5px;text-align:center;word-break:break-all}
+.student .status{font-size:10px;font-weight:800;margin-top:4px}.hint{color:var(--muted);font-size:14px;margin:20px 0 0}
+.message-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.message-head h2{margin:0;font-size:18px}
+.copy{background:var(--navy);color:#fff;padding:13px 17px}textarea{width:100%;min-height:260px;resize:vertical;border:1px solid #d4d7db;border-radius:17px;padding:18px;font:16px/1.65 Arial;color:#20252b;background:#fff;outline:none}
+.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:#111827;color:#fff;padding:12px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:520px){.app{padding:12px}.card{padding:20px}.date-row{align-items:flex-start;flex-direction:column}input[type=date]{width:100%}.student-grid{grid-template-columns:repeat(2,1fr);gap:10px}.student .roll{font-size:12px}}
